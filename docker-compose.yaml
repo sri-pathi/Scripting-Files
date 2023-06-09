@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  javaapp:
+    image: mixaverross88/dockerize_java_mysql_example_project
+    ports:
+      - 8083:8080
+  mysqlapp:
+    image: mixaverross88/dockerize_java_mysql_example_project_mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=supersecret 
+    ports:
+      - 3311:3306
